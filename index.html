@@ -7,73 +7,62 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <body>
         <header>
-            <h1>Car Review</h1>
-            <input type="text" id="search-bar" placeholder="Search for a car..." onkeyup="searchCars()">
+            <div class="logo">
+                <img src="https://www.motortrend.com/uploads/2022/09/Koenigsegg_Regera_1.jpg?w=768&width=768&q=75&format=webp" alt="Car Review" />
+            </div>
+            <nav>
+                <ul>  <!--========HOME PAGE=======-->
+
+                    <li><a href="#">Vehicles</a></li>
+                    <li><a href="#">Sell Your Car</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </header>
-        
-        <section id="car-list-section">
-            <h2>Available Cars</h2>
-            <ul id="car-list">\
 
+        <section class="hero section ">
+            <h1>Sell your car in Kenya</h1>
+            <button class="explore-btn" onclick="exploreVehicles()">Explore Vehicles</button>
+            <button class="sell-btn">Sell Your Car</button>
 
-                 <!-- Cars will be listed here dynamically from JavaScript -->
-
-            
-                </ul>
         </section>
-        
-        <section id="car-details-section" style="display: none;">
-            <h2>Car Details</h2>
-            <div id="car-details">
-                <h3 id="car-title"></h3>
-                <p id="car-description"></p>
-                <p id="car-type"></p>
-                <p id="car-price"></p>
-            </div>
+ 
 
-            <!-- Ratings and Comments -->
-            <div id="comments-section">
-                <h3>Rate & Comment</h3>
-                <label for="car-rating">Rating (1-10):</label>
-                <input type="number" id="car-rating" min="1" max="10" />
-                <textarea id="car-comment" placeholder="Leave your comment here..."></textarea>
-                <button onclick="submitComment()">Submit Comment</button>
-                <ul id="comment-list">
-                    
-                    
-                    
-                    <!-- Comments will be listed here -->
-                
-                
-                
-                </ul>
-            </div>
-
-            <!-- Similar Cars -->
-            <div id="similar-cars-section">
-                <h3>Similar Cars</h3>
-                <ul id="similar-cars-list">
-                    
-                    
-                    <!-- Similar cars will be displayed here -->
-
-
-                </ul>
-            </div>
-
-            <!-- Chatbox -->
-             
-            <div id="chat-box">
-                <h3>Chat with Us</h3>
-                <div id="chat-window"></div>
-                <input type="text" id="chat-input" placeholder="Type your message..." />
-                <button onclick="sendMessage()">Send</button>
+        <!--=====SEARCH SECTION=====-->
+        <section class="search-section">
+            <input type="text" id="search-bar" placeholder="Search by model, make, or body type..." onkeydown="searchCars()">
+            <div id="search-filters">
+                <label for="body-type">Body Type:</label>
+                <select id="body-type" onchange="filterByBodyType()">
+                    <option value="">All Types</option>
+                    <option value="suv">SUV</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="coupe">Coupe</option>
+                    <option value="van">Van</option>
+                    <option value="truck">Truck</option>
+                </select>
             </div>
         </section>
-    </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+
+
+        <!--======CHAT BOX========-->
+        <section class="chatbox-section">
+            <h2>Chat with the Seller</h2>
+            <div id="chat-window"></div>
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </section>
+    
+        <footer>
+            <p>&copy; 2024 Car Review. All Rights Reserved.</p>
+        </footer>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
+
+        
