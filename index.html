@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Review</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Car Review</h1>
+            <input type="text" id="search-bar" placeholder="Search for a car..." onkeyup="searchCars()">
+        </header>
+        
+        <section id="car-list-section">
+            <h2>Available Cars</h2>
+            <ul id="car-list">\
+
+
+                 <!-- Cars will be listed here dynamically from JavaScript -->
+
+            
+                </ul>
+        </section>
+        
+        <section id="car-details-section" style="display: none;">
+            <h2>Car Details</h2>
+            <div id="car-details">
+                <h3 id="car-title"></h3>
+                <p id="car-description"></p>
+                <p id="car-type"></p>
+                <p id="car-price"></p>
+            </div>
+
+            <!-- Ratings and Comments -->
+            <div id="comments-section">
+                <h3>Rate & Comment</h3>
+                <label for="car-rating">Rating (1-10):</label>
+                <input type="number" id="car-rating" min="1" max="10" />
+                <textarea id="car-comment" placeholder="Leave your comment here..."></textarea>
+                <button onclick="submitComment()">Submit Comment</button>
+                <ul id="comment-list">
+                    
+                    
+                    
+                    <!-- Comments will be listed here -->
+                
+                
+                
+                </ul>
+            </div>
+
+            <!-- Similar Cars -->
+            <div id="similar-cars-section">
+                <h3>Similar Cars</h3>
+                <ul id="similar-cars-list">
+                    
+                    
+                    <!-- Similar cars will be displayed here -->
+
+
+                </ul>
+            </div>
+
+            <!-- Chatbox -->
+             
+            <div id="chat-box">
+                <h3>Chat with Us</h3>
+                <div id="chat-window"></div>
+                <input type="text" id="chat-input" placeholder="Type your message..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
