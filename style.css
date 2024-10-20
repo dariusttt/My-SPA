@@ -1,116 +1,193 @@
-body {
-    font-family: 'Arial', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Prociono&display=swap');
+
+
+*{
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Playfair", serif;
+    
 }
 
-header {
-    background-color: white;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+html{
+    font-size: 50%;
 }
-nav a{
-    text-decoration: none;
-    color: #333;
-    margin: 0 10px;
+
+:root{
+    --text-color:#ffff;
+    --main-color: #333;
+}
+
+/*---top header section---*/
+
+.top-header .out-box{
+    width: 100%;
+    background: var(--main-color);
+}
+
+.top-header .out-box .inside-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #070707;
+    padding: 1rem 0 ;
+    clip-path: polygon(6% 0, 92% 0, 96% 100%, 2% 100%);
+}
+
+.out-box .inside-box .logo{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    margin-left: 13rem;
+
+}
+
+.out-box .inside-box .logo span{
+    font-size: 2.5rem;
+}
+
+.out-box .inside-box .logo span i{
+    color:red;
+    padding-right: 0.5rem;
+    
+
+}
+
+
+.out-box .inside-box .social i{
+color: #ffff;
+font-size: 3rem;
+transition: 0.5s;
+}
+
+.out-box .inside-box .social{
+    display: flex;
+    gap:0.9rem ;
+
+}
+
+.out-box .inside-box .social i:hover{
+    color:red;
     }
 
-header nav ul {
-    list-style-type: none;
-    display: flex;
+/*---media query----*/
+ .out-box .inside-box .logo{
+    margin-left:8rem ;
+
+ }
+
+ .out-box .inside-box .social{
+    margin-right: 8rem;
 }
 
-header nav ul li {
-    margin-left: 20px;
+@media(max-width:990px){
+  .top-header{
+    display: none;
+  }
 }
 
-header nav ul li a {
-    text-decoration: none;
-    color: black;
-}
 
-.hero-section {
-    text-align: center;
-    padding: 100px 20px;
-    background: url('path-to-car-image.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-}
+/*-----navbar---------*/
 
-.hero-section h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.hero-section button {
-    padding: 15px 30px;
-    margin: 10px;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.search-section {
-    padding: 20px;
-    text-align: center;
-    background-color: #f4f4f4;
-}
-
-.search-section input, select {
-    padding: 10px;
-    margin: 10px;
-    width: 300px;
-}
-
-.car-list-section {
-    padding: 50px;
-}
-
-.car-list-section h2 {
-    text-align: center;
-}
-
-#car-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.car-card {
-    width: 300px;
-    margin: 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-}
-
-.chatbox-section {
-    padding: 50px;
-    background-color: #333;
-    color: white;
-}
-
-#chat-window {
+.header{
     width: 100%;
-    height: 200px;
-    background-color: #444;
-    overflow-y: scroll;
-    margin-bottom: 10px;
-    padding: 10px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items:  center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(190,190,190,0.5),
+    0 0 10px rgba(190,190,190,0.5);
+    z-index: 111;
+    transition: 0.4s ease;
 }
 
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.header .logo img{
+    width: 200px;
 }
 
+.header nav{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 2rem;
+}
+
+.header nav ul li{
+padding: 3rem 0.5rem;
+
+}
+
+
+nav .navbar .navlinks{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 2rem;
+    position: relative;
+}
+
+nav  .navbar .navlinks li a{
+    color:black;
+    font-size: 4rem;
+    font-weight: 600;
+    position: relative;     
+}
+
+nav .others{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    font-size:3rem;
+    
+}
+
+nav others i{
+    font-size:5rem;
+    color: blue;
+    cursor:pointer ;
+}
+
+nav .others .addBtn{
+    position: relative;
+    color: #ffff;
+    background-color: red;
+    padding: 0.5rem 1.6rem;
+    font-size: 1.8rem;
+    border-radius:14px;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+
+
+nav .others .addBtn:hover{
+    color: #fff;
+    padding-right:0.5rem;
+}
+
+#menuBtn{
+font-size: 3rem;
+}
+
+
+
+nav .navbar ul li:hover , 
+nav .others i:hover{
+    color: green;
+}
+
+nav  .navbar ul li a:hover ,
+nav  .navlinks ul li a:active{
+    color: red;
+}
