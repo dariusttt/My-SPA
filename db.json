@@ -1,0 +1,47 @@
+{
+    "cars": [
+      {
+        "id": 1,
+        "name": "Audi RSQ8",
+        "price": "$85,000",
+        "reviews": 6,
+        "image": "src/img/car-1.webp"
+      },
+      {
+        "id": 2,
+        "name": "Audi R8",
+        "price": "$110,000",
+        "reviews": 6,
+        "image": "src/img/car-2.webp"
+      },
+      {
+        "id": 3,
+        "name": "Bentley Continental GT",
+        "price": "$180,000",
+        "reviews": 6,
+        "image": "src/img/car-3.webp"
+      },
+      {
+        "id": 4,
+        "name": "BMW X5M",
+        "price": "$76,000",
+        "reviews": 6,
+        "image": "src/img/car-4.webp"
+      },
+      {
+        "id": 5,
+        "name": "Ferrari Roma",
+        "price": "$250,000",
+        "reviews": 6,
+        "image": "src/img/car-5.webp"
+      },
+      {
+        "id": 6,
+        "name": "Maserati C20",
+        "price": "$130,000",
+        "reviews": 6,
+        "image": "src/img/car-6.webp"
+      }
+    ]
+  }
+  
