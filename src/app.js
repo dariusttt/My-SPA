@@ -26,6 +26,30 @@ window.addEventListener('scroll', () => {
 });
 
 
+//const toggle =  document.getElementById('darkmode');
+// Toggle dark mode functionality
+//toggle.addEventListener('click',  () => {
+  // Toggle icon classes
+  //this.classList.toggle('bx');
+  //this.classList.toggle('bxs-sun');
+  //this.classList.toggle('bxs-moon');
+
+  // Check current icon class and update body styles accordingly
+  //if(this.classList.contains('bxs-moon')){
+    //body.style.background = 'white';
+    //body.style.color = 'black';
+    //body.style.transition = '2s';
+  //} else {
+    //body.style.background = 'black';
+    //body.style.color = 'white';
+    //body.style.transition = '2s';
+  //}
+//}
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('cars-container');
   
@@ -57,3 +81,22 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
 
+
+const toggle = document.getElementById('darkmode');
+
+toggle.addEventListener('click', () => {
+
+   toggle.classList.toggle('bx');
+  toggle.classList.toggle('bx-sun');
+  toggle.classList.toggle('bxs-moon');
+
+  if(toggle.classList.contains('bxs-moon')){
+    document.body.style.background = 'white';
+    document.body.style.color = 'black';
+    document.body.style.transition = '2s';
+  } else {
+    document.body.style.background = 'black';
+    document.body.style.color = 'white';
+    document.body.style.transition = '2s';
+  }
+});
