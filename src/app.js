@@ -62,7 +62,7 @@ const toggle = document.getElementById('darkmode');
 toggle.addEventListener('click', () => {
 
    toggle.classList.toggle('bx');
-  toggle.classList.toggle('bx-moon');
+  toggle.classList.toggle('bxs-moon');
   toggle.classList.toggle('bxs-sun');
 
   if(toggle.classList.contains('bxs-sun')){
