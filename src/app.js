@@ -1,4 +1,5 @@
-let search = document.querySelector('.search-box');
+let search = document.querySelector('.search-box');  // search box
+
 
 document.querySelector('#search-icon').onclick = ()  => {
     search.classList.toggle('active');
@@ -24,30 +25,6 @@ window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
 
 });
-
-
-//const toggle =  document.getElementById('darkmode');
-// Toggle dark mode functionality
-//toggle.addEventListener('click',  () => {
-  // Toggle icon classes
-  //this.classList.toggle('bx');
-  //this.classList.toggle('bxs-sun');
-  //this.classList.toggle('bxs-moon');
-
-  // Check current icon class and update body styles accordingly
-  //if(this.classList.contains('bxs-moon')){
-    //body.style.background = 'white';
-    //body.style.color = 'black';
-    //body.style.transition = '2s';
-  //} else {
-    //body.style.background = 'black';
-    //body.style.color = 'white';
-    //body.style.transition = '2s';
-  //}
-//}
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -80,17 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
 
-
-
 const toggle = document.getElementById('darkmode');
 
 toggle.addEventListener('click', () => {
 
    toggle.classList.toggle('bx');
-  toggle.classList.toggle('bx-sun');
-  toggle.classList.toggle('bxs-moon');
+  toggle.classList.toggle('bx-moon');
+  toggle.classList.toggle('bxs-sun');
 
-  if(toggle.classList.contains('bxs-moon')){
+  if(toggle.classList.contains('bxs-sun')){
     document.body.style.background = 'white';
     document.body.style.color = 'black';
     document.body.style.transition = '2s';
