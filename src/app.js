@@ -62,8 +62,8 @@ const toggle = document.getElementById('darkmode');
 toggle.addEventListener('click', () => {
 
    toggle.classList.toggle('bx');
-  toggle.classList.toggle('bxs-moon');
   toggle.classList.toggle('bxs-sun');
+  toggle.classList.toggle('bxs-moon');
 
   if(toggle.classList.contains('bxs-sun')){
     document.body.style.background = 'white';
